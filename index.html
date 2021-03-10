@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car flower house | Siw</title>
+    <style>
+      /* create animations*/
+
+      #cloud {
+        animation: cloudes 10s infinite;
+      }
+      @keyframes cloudes {
+        0% {
+          fill: transparent;
+        }
+        50% {
+          fill: whitesmoke;
+        }
+
+        100% {
+          fill: transparent;
+        }
+      }
+
+      #flower {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.99);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0.99);
+        }
+      }
+
+      .drive {
+        animation: drivecar 5s ease-in-out;
+      }
+
+      @keyframes drivecar {
+        0% {
+          transform: translateX(0vw);
+        }
+
+        100% {
+          transform: translateX(170px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Car, Flower, House</h1>
+    <svg width="400" height="300">
+      <!--BACKGROUND-->
+      <!--sky-->
+      <rect
+        x="0"
+        y="150"
+        width="350"
+        height="100"
+        stroke-width="5"
+        fill="darkgreen"
+      />
+
+      <!-- street-->
+      <rect
+        x="0"
+        y="190"
+        width="350"
+        height="40"
+        stroke-width="5"
+        fill="grey"
+      />
+
+      <!--ground-->
+      <rect
+        x="0"
+        y="0"
+        width="350"
+        height="150"
+        stroke-width="5"
+        fill="lightblue"
+      />
+
+      <!--Clouds-->
+      <path
+        id="cloud"
+        fill="white"
+        stroke-width="1"
+        d="M 20 50 C 20 80, 80 80, 90 50, 90 50, 130 40, 90 30, 90 30, 90 0, 60 20, 60 20,40 -10,10 20, 10 20, -130 40, 20 50"
+      />
+
+      <circle id="sun" fill="yellow" cx="300" cy="40" r="15" stroke-width="1" />
+
+      <!-- CREATE HOUSE -->
+      <rect
+        x="100"
+        y="120"
+        width="70"
+        height="50"
+        stroke-width="5"
+        fill="#b3b0aa"
+      />
+
+      <rect
+        x="250"
+        y="120"
+        width="70"
+        height="50"
+        stroke-width="5"
+        fill="#b3b0aa"
+      />
+
+      <!--Door-->
+      <rect x="260" y="130" width="20" height="40" stroke-width="5" />
+      <rect x="120" y="130" width="20" height="40" stroke-width="5" />
+
+      <path stroke-width="2" stroke="black" d="M 180,120 H 100,90 L 130,80 z" />
+
+      <path
+        stroke-width="2"
+        stroke="black"
+        d="M 330,120 H 240,240 L 290,80 z"
+      />
+
+      <!-- CREATE CAR -->
+      <g id="car">
+        <path
+          fill="blue"
+          stroke-width="1"
+          d="M 50 215 C 50 170, 100 150, 140 190, 140 190, 160 180, 160 215"
+        />
+        <circle fill="white" cx="145" cy="210" r="9" stroke-width="1" />
+        <circle fill="white" cx="70" cy="210" r="9" stroke-width="1" />
+      </g>
+
+      <!-- CEATE FLOWER -->
+      <g id="flower">
+        <line
+          x1="310"
+          x2="310"
+          y1="220"
+          y2="250"
+          stroke="#0f380e"
+          stroke-width="5"
+        />
+
+        <circle fill="orange" cx="310" cy="210" r="10" stroke-width="1" />
+        <circle fill="red" cx="310" cy="192" r="10" stroke-width="1" />
+        <circle fill="red" cx="310" cy="228" r="10" stroke-width="1" />
+        <circle fill="red" cx="325" cy="218" r="10" stroke-width="1" />
+        <circle fill="red" cx="325" cy="200" r="10" stroke-width="1" />
+        <circle fill="red" cx="295" cy="200" r="10" stroke-width="1" />
+        <circle fill="red" cx="295" cy="218" r="10" stroke-width="1" />
+      </g>
+    </svg>
+    <script src="script.js"></script>
+  </body>
+</html>
